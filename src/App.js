@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BarChart from "./components/BarChart";
+import CombinedStats from "./components/CombinedStats";
+import Home from "./components/Home";
+import PieChart from "./components/PieChart";
+import Statistics from "./components/Statistics";
+import Transactions from "./components/Transactions";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Home />
+        <Routes>
+          <Route path="/" element={<Transactions />} />
+          <Route path="/stats" element={<Statistics />} />
+          <Route path="/bar-stats" element={<BarChart />} />
+          <Route path="/pie-stats" element={<PieChart />} />
+          <Route path="/combined-stats" element={<CombinedStats />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
