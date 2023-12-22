@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Backend in /server folder
+Database - /server/data/product.json
 
 ## Available Scripts
 
